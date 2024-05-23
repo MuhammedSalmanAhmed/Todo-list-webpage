@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url(pexels-black-ice-1314544.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.card{
+    background-color: #F5F7F8;
+}
+
+#main-header{
+    border-radius: 5px;
+    background-color: #F4CE14;
+}
+
+footer{
+    padding: 10px 0px;
+    text-align: center;
+    background-color: #45474B;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.sun{
+    float: right;
+    font-size: 1.4rem;
+}
+
+.header-title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #030202;
+}
+
+.container{
+    width: 50%;
+    margin-top: 7rem;
+}
+
+.congrat{
+    position: absolute;
+    background-color: rgb(2, 161, 2);
+    top:3rem;
+    left: 35%;
+    font-size: 1.25rem;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    animation-name: blast;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+}
+
+@keyframes blast {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(15deg); }
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-15deg);}
+    100% {transform: rotate(0deg); }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width: 80%;
+    }
+    .congrat{
+        left: 13.5%;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .container{
+        width: 99%;
+    }
+    .congrat{
+        left: 7%;
+        font-size: 1rem;
+    }
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-bottom: 4px solid rgb(249, 230, 146);
+}
+
+.content{
+    display: 1 1 0%;
+    width: 90%;
+}
+
+.item .content .text{
+    font-size: 1.125rem;
+    width: 100%;
+    border-color: transparent;
+}
+
+.item .content .text:hover{
+    cursor: context-menu;
+}
+
+.item .action{
+    display: flex;
+}
+
+.item .action button{
+    margin-left: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 2px 6px;
+}
+
+.btn:hover{
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes example{
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(30deg); }
+    50% {transform: rotate(0deg);}
+    75% {transform: rotate(-30deg);}
+    100% {transform: rotate(0deg); }
+}
